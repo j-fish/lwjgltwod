@@ -1,2 +1,2 @@
 # lwjgltwod
-LWJGL3 2D library
+LWJGL3 2D stuff
