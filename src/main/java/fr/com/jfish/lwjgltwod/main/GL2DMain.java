@@ -1,5 +1,6 @@
 package fr.com.jfish.lwjgltwod.main;
 
+import fr.com.jfish.lwjgltwod.entity.BackgroundFrame;
 import fr.com.jfish.lwjgltwod.entity.Mage;
 import fr.com.jfish.lwjgltwod.utils.Shader;
 import fr.com.jfish.lwjgltwod.maths.Matrix4f;
@@ -27,6 +28,7 @@ public class GL2DMain {
     private Callback debugProc;
     private Mage ent1;
     private Mage ent2;
+    private BackgroundFrame bg;
     
     //private KeyBoardManager keyCallback;
     //private MousePositionManager mousePosCallBack;    
@@ -83,6 +85,7 @@ public class GL2DMain {
 
         ent1 = new Mage("resources/mage0.png", 0f, 0f, 0f, .89f, .9f);
         ent2 = new Mage("resources/mage0.png", -1f, 0f, 0f, .9f, .9f);
+        bg = new BackgroundFrame("resources/bg.png", 0f, 0f, 0f, .8f, 5f, 800f, 600f);
     }
     
     void run() {
@@ -122,11 +125,13 @@ public class GL2DMain {
         glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);  
         ent1.render();
         ent2.render();
+        bg.render();
     }
     
     void update(final float dt) {
         ent1.update();
         ent2.update();
+        bg.update();
     }
   
 }
