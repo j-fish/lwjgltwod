@@ -16,8 +16,8 @@ public class Mage extends LWJGLTwoDEntity {
     public void update() {
         
         if (this.instanceNum == 1) {
-            position.x  += .001f;
-            if (position.x > 3f) position.x = -3f;
+            position.x  += .01f;
+            if (position.x > 3f) position.x = -8f;
         }        
     }
 

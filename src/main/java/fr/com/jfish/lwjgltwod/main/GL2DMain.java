@@ -44,11 +44,15 @@ public class GL2DMain {
             return;
         }
 
-        glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
+        glfwDefaultWindowHints();
+        glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
+        glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+        glfwWindowHint(GLFW_SAMPLES, 4);
+        
         window = glfwCreateWindow(800, 600, "2Dtest LWJGL3", NULL, NULL);
         if (window == NULL) {
-                System.err.println("ERRO >> Could not create GLFW window...");
-                return;
+        	System.err.println("ERRO >> Could not create GLFW window...");
+            return;
         }
 
         GLFWVidMode vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());

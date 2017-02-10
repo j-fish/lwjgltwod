@@ -33,21 +33,14 @@ public class LWJGLTwoDBackground extends AbstractTwoD {
         } catch (final IOException iOEx) {
             Logger.getLogger(Texture.class.getName()).log(Level.SEVERE, null, iOEx);
         }
-                
-        /*this.vertices = new float[] {
-            0f, 0f, this.zIndex,
-            viewWidth, 0f, this.zIndex,
-            viewWidth, viewHeight, this.zIndex,
-            0f, viewHeight, this.zIndex
-        };*/
         
         this.vertices = new float[] {
-			-8f, -8f * 9.0f / 16.0f, 0.0f,
-			-8f,  8f * 9.0f / 16.0f, 0.0f,
-			  0.0f,  8f * 9.0f / 16.0f, 0.0f,
-			  0.0f, -8f * 9.0f / 16.0f, 0.0f
+			-10f,  5.6f, 0.0f,
+			 10f,  5.6f, 0.0f,
+			 10f, -5.6f, 0.0f,
+			-10f, -5.6f, 0.0f
 		};
-
+        
         this.indices = new byte[] {
             0, 1, 2,
             2, 3, 0
